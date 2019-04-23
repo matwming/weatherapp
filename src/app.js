@@ -106,6 +106,8 @@ app.get("*", (req, res) => {
   errorMessage: "page not found"
  });
 });
-app.listen(3000, () => {
- `server is listening on 4000`;
+
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+ `server is listening on ${port}`;
 });
